@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_corner_radius">4dp</dimen>
+    <dimen name="favorites_button_width">44dp</dimen>
+    <dimen name="favorites_button_height">40dp</dimen>
+    <dimen name="indent_2dp">2dp</dimen>
+    <dimen name="indent_4dp">4dp</dimen>
+    <dimen name="indent_6dp">6dp</dimen>
+    <dimen name="indent_8dp">8dp</dimen>
+    <dimen name="indent_16dp">16dp</dimen>
+    <dimen name="indent_32dp">32dp</dimen>
+    <dimen name="indent_48dp">48dp</dimen>
+    <dimen name="product_list_item_horizontal_margin">@dimen/indent_16dp</dimen>
+    <dimen name="product_list_item_vertical_margin">@dimen/indent_8dp</dimen>
+    <dimen name="product_list_vertical_padding">@dimen/indent_8dp</dimen>
+    <dimen name="toolbar_button_size">40dp</dimen>
+</resources>

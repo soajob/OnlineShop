@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clProductShortData"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/indent_48dp"
+    android:paddingStart="@dimen/product_list_item_horizontal_margin"
+    android:paddingTop="@dimen/product_list_item_vertical_margin"
+    android:paddingEnd="@dimen/product_list_item_horizontal_margin"
+    android:paddingBottom="@dimen/product_list_item_vertical_margin">
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="@dimen/product_image_size"
+        android:layout_height="@dimen/product_image_size"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/product_image"
+        android:maxWidth="@dimen/product_image_size"
+        android:maxHeight="@dimen/product_image_size"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_placeholder" />
+
+    <CheckBox
+        android:id="@+id/cbFavorite"
+        android:layout_width="@dimen/favorites_button_width"
+        android:layout_height="@dimen/favorites_button_height"
+        android:layout_marginStart="@dimen/indent_16dp"
+        android:background="@drawable/favorites_selector"
+        android:button="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductTitle"
+        style="@style/TitleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/indent_16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProductImage"
+        tools:text="Apple Iphone X" />
+
+    <TextView
+        android:id="@+id/tvProductShortDescription"
+        style="@style/DescriptionTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductTitle"
+        tools:text="@string/label_no_data" />
+
+    <TextView
+        android:id="@+id/tvProductNewPrice"
+        style="@style/NewPriceTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvProductOldPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductShortDescription"
+        tools:text="@string/label_no_data" />
+
+    <TextView
+        android:id="@+id/tvProductOldPrice"
+        style="@style/OldPriceTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/indent_8dp"
+        android:paddingEnd="@dimen/indent_8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvProductNewPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvProductNewPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

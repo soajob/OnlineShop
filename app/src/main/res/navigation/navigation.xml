@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.sostrovsky.onlineshop.ui.product.list.ProductListFragment"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.sostrovsky.onlineshop.ui.product.details.ProductDetailsFragment">
+        <argument
+            android:name="product_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:popUpTo="@id/productListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.sostrovsky.onlineshop.ui.product.favorites.FavoriteListFragment">
+        <action
+            android:id="@+id/action_favoritesFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:popUpTo="@id/productListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

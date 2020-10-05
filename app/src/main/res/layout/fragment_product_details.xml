@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingTop="@dimen/indent_8dp"
+        android:paddingBottom="@dimen/indent_16dp">
+
+        <include
+            android:id="@+id/clProductShortData"
+            layout="@layout/product_short_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblDescriptionHeader"
+            style="@style/TitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/indent_16dp"
+            android:layout_marginTop="@dimen/indent_32dp"
+            android:text="@string/information"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clProductShortData"
+            tools:text="@string/information" />
+
+        <TextView
+            android:id="@+id/lblDescriptionBody"
+            style="@style/DescriptionTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/indent_16dp"
+            android:layout_marginTop="@dimen/indent_8dp"
+            android:layout_marginBottom="@dimen/indent_8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnAddToCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblDescriptionHeader"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="@string/label_no_data" />
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/indent_16dp"
+            android:layout_marginEnd="@dimen/indent_4dp"
+            android:background="@drawable/regular_button"
+            android:text="@string/add_to_cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnBuyNow"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnBuyNow"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/indent_4dp"
+            android:layout_marginEnd="@dimen/indent_16dp"
+            android:background="@drawable/accent_button"
+            android:text="@string/buy_now"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnAddToCart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

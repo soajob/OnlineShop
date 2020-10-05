@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/sf_pro_regular</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:padding">@dimen/button_padding</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+    <style name="DescriptionTextStyle">
+        <item name="android:textColor">@color/description_text_color</item>
+        <item name="android:textSize">@dimen/description_text_size</item>
+    </style>
+
+    <style name="NewPriceTextStyle">
+        <item name="fontFamily">@font/open_sans_bold</item>
+        <item name="android:textColor">@color/new_price_text_color</item>
+        <item name="android:textSize">@dimen/new_price_text_size</item>
+    </style>
+
+    <style name="OldPriceTextStyle">
+        <item name="fontFamily">@font/open_sans_bold</item>
+        <item name="android:textColor">@color/old_price_text_color</item>
+        <item name="android:textSize">@dimen/old_price_text_size</item>
+    </style>
+
+    <style name="TitleTextStyle">
+        <item name="fontFamily">@font/open_sans_extra_bold</item>
+        <item name="android:textColor">@color/title_text_color</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

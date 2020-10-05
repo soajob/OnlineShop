@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:contentInsetStart="0dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/indent_8dp">
+
+        <FrameLayout
+            android:id="@+id/flToolbarBackButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/toolbar_button_size"
+            android:layout_gravity="center_horizontal|start"
+            android:clickable="false"
+            android:padding="@dimen/indent_8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivAppLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivArrowBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/arrow_back"
+                android:src="@drawable/ic_arrow_back" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ivAppLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/app_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/flToolbarFavoritesButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/toolbar_button_size"
+            android:layout_gravity="center_horizontal|end"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingVertical="@dimen/indent_8dp"
+            android:paddingStart="@dimen/indent_8dp"
+            android:paddingEnd="@dimen/indent_2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAppLogo"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivFavorites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|end"
+                android:contentDescription="@string/favorites"
+                android:src="@drawable/ic_favorites_toolbar" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>
